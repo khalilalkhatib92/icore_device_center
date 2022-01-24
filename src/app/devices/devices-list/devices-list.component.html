@@ -1,0 +1,5 @@
+<div *ngFor="let device of devices; let index=index" class="device-container">
+<div>{{index}} ) {{device.title | uppercase}}</div>
+<div>{{device.releaseDate| date:"dd-MM-yyyy" | uppercase}}</div>
+<div>{{device.price}}</div>
+</div>
