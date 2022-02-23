@@ -1,6 +1,7 @@
-<h1>Computer Devices</h1>
-<!-- Data Binding: [devices] is used here to binding property of 2 defferent component-->
-<app-devices-list [devices]="ComputerDevices"></app-devices-list>
+<app-menu></app-menu>
 
-<h1>Phone Devices</h1>
-<app-devices-list [devices]="PhoneDevices"></app-devices-list>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer class="footer"></app-footer>

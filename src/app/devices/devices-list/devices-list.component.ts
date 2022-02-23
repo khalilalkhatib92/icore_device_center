@@ -15,4 +15,8 @@ export class DevicesListComponent implements OnInit {
   @Input()
   devices: any;
 
+  remove(n : number){
+    this.devices.splice(n, 1);
+  }
+
 }
