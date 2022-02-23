@@ -18,6 +18,10 @@ import { CreateDealersComponent } from './dealers/create-dealers/create-dealers.
 import { IndexDeviceCenterComponent } from './device-center/index-device-center/index-device-center.component';
 import { CreateDeviceCenterComponent } from './device-center/create-device-center/create-device-center.component';
 import { CreateDeviceComponent } from './devices/create-device/create-device.component';
+import { EditDealersComponent } from './dealers/edit-dealers/edit-dealers.component';
+import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
+import { EditDeviceCenterComponent } from './device-center/edit-device-center/edit-device-center.component';
+import { EditDeviceComponent } from './devices/edit-device/edit-device.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { CreateDeviceComponent } from './devices/create-device/create-device.com
     CreateDealersComponent,
     IndexDeviceCenterComponent,
     CreateDeviceCenterComponent,
-    CreateDeviceComponent
+    CreateDeviceComponent,
+    EditDealersComponent,
+    EditGenreComponent,
+    EditDeviceCenterComponent,
+    EditDeviceComponent
   ],
   imports: [
     BrowserModule,
