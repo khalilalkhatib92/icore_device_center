@@ -23,6 +23,7 @@ import { EditDealersComponent } from './dealers/edit-dealers/edit-dealers.compon
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 import { EditDeviceCenterComponent } from './device-center/edit-device-center/edit-device-center.component';
 import { EditDeviceComponent } from './devices/edit-device/edit-device.component';
+import { FormGenreComponent } from './genres/form-genre/form-genre.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { EditDeviceComponent } from './devices/edit-device/edit-device.component
     EditDealersComponent,
     EditGenreComponent,
     EditDeviceCenterComponent,
-    EditDeviceComponent
+    EditDeviceComponent,
+    FormGenreComponent
   ],
   imports: [
     BrowserModule,
