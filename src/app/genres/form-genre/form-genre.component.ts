@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { firstLetterUpperCase } from 'src/app/validators/firstLetterUpperCase';
+import { genreCreationDTO } from '../genre.module';
 
 @Component({
   selector: 'app-form-genre',
@@ -12,6 +13,10 @@ export class FormGenreComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   form!: FormGroup;
+  @Input()
+  model!: genreCreationDTO;
+  @Output()
+  onSaveChanges: EventEmitter<genreCreationDTO> = new EventEmitter<genreCreationDTO>(); 
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -19,10 +24,13 @@ export class FormGenreComponent implements OnInit {
         validators: [Validators.required, Validators.minLength(3), firstLetterUpperCase()]
       }]
     });
+    if(this.model !== undefined){
+      this.form.patchValue(this.model)
+    }
   }
 
   saveChanges(){
-    //this.router.navigate(['/genres']);
+    this.onSaveChanges.emit(this.form.value);
   }
   getErrorMessageFieldName(){
     const field = this.form.get('name');
