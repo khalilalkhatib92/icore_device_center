@@ -25,6 +25,7 @@ import { EditDeviceCenterComponent } from './device-center/edit-device-center/ed
 import { EditDeviceComponent } from './devices/edit-device/edit-device.component';
 import { FormGenreComponent } from './genres/form-genre/form-genre.component';
 import { FilterComponent } from './devices/filter/filter.component';
+import { FormDealerComponent } from './dealers/form-dealer/form-dealer.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FilterComponent } from './devices/filter/filter.component';
     EditDeviceCenterComponent,
     EditDeviceComponent,
     FormGenreComponent,
-    FilterComponent
+    FilterComponent,
+    FormDealerComponent
   ],
   imports: [
     BrowserModule,
