@@ -8,6 +8,7 @@ import { EditDeviceCenterComponent } from './device-center/edit-device-center/ed
 import { IndexDeviceCenterComponent } from './device-center/index-device-center/index-device-center.component';
 import { CreateDeviceComponent } from './devices/create-device/create-device.component';
 import { EditDeviceComponent } from './devices/edit-device/edit-device.component';
+import { FilterComponent } from './devices/filter/filter.component';
 import { CreateGenreComponent } from './genres/create-genre/create-genre.component';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 import { IndexGenresComponent } from './genres/index-genres/index-genres.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
 
   {path:'devices/create', component:CreateDeviceComponent},
   {path: 'devices/edit/:id', component:EditDeviceComponent},
+  {path: 'devices/filter', component:FilterComponent},
   {path: '**', redirectTo: ''}
 ];
 

@@ -20,7 +20,8 @@ export class EditGenreComponent implements OnInit {
   }
 
   saveChanges(genreCreationDTO: genreCreationDTO){
-
+    console.log(genreCreationDTO);
+    console.log("Genre Edited Succesfully!");
   }
 
 }
