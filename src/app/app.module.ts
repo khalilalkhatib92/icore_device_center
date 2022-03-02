@@ -26,6 +26,7 @@ import { EditDeviceComponent } from './devices/edit-device/edit-device.component
 import { FormGenreComponent } from './genres/form-genre/form-genre.component';
 import { FilterComponent } from './devices/filter/filter.component';
 import { FormDealerComponent } from './dealers/form-dealer/form-dealer.component';
+import { InputImgComponent } from './utilities/input-img/input-img.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { FormDealerComponent } from './dealers/form-dealer/form-dealer.component
     EditDeviceComponent,
     FormGenreComponent,
     FilterComponent,
-    FormDealerComponent
+    FormDealerComponent,
+    InputImgComponent
   ],
   imports: [
     BrowserModule,

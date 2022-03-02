@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
           category: "Mac Appel",
           releasDate: new Date(),
           price: 2000.99,
-          poster:'https://cdn.idropnews.com/wp-content/uploads/2021/11/29130843/MacBook-Air-Concept-Renders-LeaksApplePro-x-iDrop-News-3.jpg'
+          poster:'https://5.imimg.com/data5/BM/JB/PA/SELLER-8416002/refurbished-apple-macbook-pro-a1502-retina-500x500.jpg'
         }
       ];
       this.PhoneDevices = [
