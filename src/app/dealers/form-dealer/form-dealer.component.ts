@@ -21,11 +21,16 @@ export class FormDealerComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       name: ['', {validators: [Validators.required]}],
-      dateOfBirth: ''
+      dateOfBirth: '',
+      picture: ''
     })
     if(this.model !==undefined){
       this.form.patchValue(this.model);
     }
+  }
+
+  onSaveImage(image: any){
+    this.form.get('picture')?.setValue(image);
   }
 
   saveChanges(){
