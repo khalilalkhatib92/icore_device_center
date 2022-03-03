@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { dealerCreationDTO } from '../dealers.module';
+import { dealerCreationDTO as dealerDTO } from '../dealers.module';
 
 @Component({
   selector: 'app-form-dealer',
@@ -10,30 +10,32 @@ import { dealerCreationDTO } from '../dealers.module';
 export class FormDealerComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { }
-  form!:FormGroup;
+  form!: FormGroup;
 
   @Input()
-  model!: dealerCreationDTO;
+  model!: dealerDTO;
+  //model!: dealerCreationDTO; // this model of type (dealerCreationDTO) will not be used here because 
+  //we in edit-dealer mode that will reciev a url value of picture as (string), in order that we using (dealerDTO) interface for simplsity.
 
   @Output()
-  onSaveChanges: EventEmitter<dealerCreationDTO> = new EventEmitter<dealerCreationDTO>();
+  onSaveChanges = new EventEmitter<dealerDTO>();
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      name: ['', {validators: [Validators.required]}],
+      name: ['', { validators: [Validators.required] }],
       dateOfBirth: '',
       picture: ''
     })
-    if(this.model !==undefined){
+    if (this.model !== undefined) {
       this.form.patchValue(this.model);
     }
   }
 
-  onSaveImage(image: any){
+  onImageSelected(image: any) {
     this.form.get('picture')?.setValue(image);
   }
 
-  saveChanges(){
+  saveChanges() {
     this.onSaveChanges.emit(this.form.value);
   }
 

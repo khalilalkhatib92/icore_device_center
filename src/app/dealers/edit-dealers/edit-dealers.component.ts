@@ -10,10 +10,11 @@ import { dealerCreationDTO, dealerDTO } from '../dealers.module';
 export class EditDealersComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute) { }
-  model: dealerDTO = {name:'Khalil',
-                     dateOfBirth: new Date(),
-                     picture:'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-                  };
+  model: dealerDTO = {
+    name: 'Khalil',
+    dateOfBirth: new Date(),
+    picture: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+  };
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
@@ -21,8 +22,8 @@ export class EditDealersComponent implements OnInit {
     });
   }
 
-  saveChanges(dealerCreationDTO: dealerCreationDTO){
-    console.log(dealerCreationDTO)
+  saveChanges(dealerCreationDTO: dealerCreationDTO) {
+    console.log(dealerCreationDTO);
   }
 
 }

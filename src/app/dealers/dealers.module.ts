@@ -1,7 +1,7 @@
 export interface dealerCreationDTO{
     name: string;
     dateOfBirth: Date;
-    picture: File;
+    picture: File | string;
 }
 
 // This interface will used when receving a data form DB for example.

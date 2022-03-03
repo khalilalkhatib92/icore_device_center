@@ -11,7 +11,7 @@
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <app-input-img [urlCurrentImage]="model?.picture"
-    (onSaveImage)="onSaveImage($event)"></app-input-img>
+    (onImageSelected)="onImageSelected($event)"></app-input-img>
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
         <a mat-stroked-button routerLink="/dealers">Cancel</a>

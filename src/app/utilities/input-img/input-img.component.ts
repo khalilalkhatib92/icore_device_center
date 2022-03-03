@@ -11,9 +11,9 @@ export class InputImgComponent implements OnInit {
   constructor() { }
   image64!: string;
   @Input()
-  urlCurrentImage!: string;
+  urlCurrentImage: string | File | any ;
   @Output()
-  onSaveImage = new EventEmitter<File>();
+  onImageSelected = new EventEmitter<File>();
 
   ngOnInit(): void {
   }
@@ -24,7 +24,8 @@ export class InputImgComponent implements OnInit {
       toBase64(file).then(
         (value: string | any) => this.image64 = value
       );
-      this.onSaveImage.emit(file);
+      this.onImageSelected.emit(file);
+      this.urlCurrentImage = null;
     }
 
   }
