@@ -1,12 +1,15 @@
 <mat-tab-group>
     <mat-tab label="Edit">
-        <mat-form-field appearance="fill" onchange="changeMarkdown.emit($event.textarea.value)">
+        <!--Why we use use the $any typecast function ($any($event.target).value) to stop the type checking in the template, 
+            and cann pass the value of markdownContent when entered in the TextArea tag
+         -->
+        <mat-form-field appearance="fill" (change)="changeMarkdown.emit($any($event.target).value)">
             <mat-label>Biography</mat-label>
             <textarea [(ngModel)]="markdownContent" matInput></textarea>
         </mat-form-field>
     </mat-tab>
     <mat-tab label="Preview">
-        <markdown [data]="markdownContent" ngPreserWhitespaces></markdown>
+        <markdown [data]="markdownContent" ngPreserveWhitespaces></markdown>
 
     </mat-tab>
 </mat-tab-group>

@@ -7,7 +7,7 @@ import { DevicesListComponent } from './devices/devices-list/devices-list.compon
 import { GenericListComponent } from './utilities/generic-list/generic-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import {MarkdownModule} from'ngx-markdown'
+import {MarkdownModule} from'ngx-markdown';
 
 import {MaterialModule} from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
