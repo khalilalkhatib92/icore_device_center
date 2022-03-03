@@ -24,7 +24,8 @@ export class FormDealerComponent implements OnInit {
     this.form = this.formBuilder.group({
       name: ['', { validators: [Validators.required] }],
       dateOfBirth: '',
-      picture: ''
+      picture: '',
+      biography:''
     })
     if (this.model !== undefined) {
       this.form.patchValue(this.model);
@@ -37,6 +38,10 @@ export class FormDealerComponent implements OnInit {
 
   saveChanges() {
     this.onSaveChanges.emit(this.form.value);
+  }
+
+  changeMarkdown(content: any){
+    this.form.get('biography')?.setValue(content);
   }
 
 }
