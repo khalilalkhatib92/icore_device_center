@@ -2,6 +2,7 @@ export interface dealerCreationDTO{
     name: string;
     dateOfBirth: Date;
     picture: File | string;
+    biography: string;
 }
 
 // This interface will used when receving a data form DB for example.
@@ -10,4 +11,5 @@ export interface dealerDTO{
     name: string;
     dateOfBirth: Date;
     picture: string;
+    biography: string;
 }
