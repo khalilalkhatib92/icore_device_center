@@ -15,7 +15,7 @@ export class FormDealerComponent implements OnInit {
   @Input()
   model!: dealerDTO;
   //model!: dealerCreationDTO; // this model of type (dealerCreationDTO) will not be used here because 
-  //we in edit-dealer mode that will reciev a url value of picture as (string), in order that we using (dealerDTO) interface for simplsity.
+  //we in edit-dealer mode that will recive a url value of picture as (string), in order that we using (dealerDTO) interface for simplsity.
 
   @Output()
   onSaveChanges = new EventEmitter<dealerDTO>();

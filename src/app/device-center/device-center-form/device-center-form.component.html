@@ -1,0 +1,22 @@
+<form (submit)="saveCahnges()" [formGroup]="form">
+    <div class="public-errors">
+        <span>
+            <mat-error *ngIf="form.invalid"> Enter all required fields !!</mat-error>
+        </span>
+    </div>
+    <mat-form-field appearance="outline">
+        <mat-label>Name*</mat-label>
+        <input formControlName="name" matInput />
+        <mat-error>The Name field is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Address</mat-label>
+        <input formControlName="address" matInput />
+    </mat-form-field>
+
+    <app-map></app-map>
+    <div>
+        <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
+        <a mat-stroked-button routerLink="/devicecenter">Cancel</a>
+    </div>
+</form>

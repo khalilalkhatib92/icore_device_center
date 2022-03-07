@@ -8,6 +8,7 @@ import { GenericListComponent } from './utilities/generic-list/generic-list.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MarkdownModule} from'ngx-markdown';
+import {LeafletModule} from '@asymmetrik/ngx-leaflet'
 
 import {MaterialModule} from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
@@ -29,6 +30,8 @@ import { FilterComponent } from './devices/filter/filter.component';
 import { FormDealerComponent } from './dealers/form-dealer/form-dealer.component';
 import { InputImgComponent } from './utilities/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
+import { DeviceCenterFormComponent } from './device-center/device-center-form/device-center-form.component';
+import { MapComponent } from './utilities/map/map.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,9 @@ import { InputMarkdownComponent } from './utilities/input-markdown/input-markdow
     FilterComponent,
     FormDealerComponent,
     InputImgComponent,
-    InputMarkdownComponent
+    InputMarkdownComponent,
+    DeviceCenterFormComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +67,7 @@ import { InputMarkdownComponent } from './utilities/input-markdown/input-markdow
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
+    LeafletModule,
     MarkdownModule.forRoot()
     
   ],
