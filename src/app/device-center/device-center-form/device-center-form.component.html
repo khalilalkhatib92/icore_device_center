@@ -14,7 +14,8 @@
         <input formControlName="address" matInput />
     </mat-form-field>
 
-    <app-map></app-map>
+    <h4>Select Dealer Center Location/Address </h4>
+    <app-map (onSelectedLocation)="onSelectedLocation($event)"></app-map>
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
         <a mat-stroked-button routerLink="/devicecenter">Cancel</a>

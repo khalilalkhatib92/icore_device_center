@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { coordinatesMap } from 'src/app/utilities/map/coordinate';
 import { deviceCenterCreationDTO } from '../deviceCenter.model';
 
 @Component({
@@ -21,7 +22,9 @@ export class DeviceCenterFormComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       name: ['', { validators: [Validators.required] }],
-      address: ''
+      address: '',
+      latitude: ['', { validators: [Validators.required] }],
+      longitude: ['', { validators: [Validators.required] }],
     });
     if (this.model !== undefined) {
       this.form.patchValue(this.model);
@@ -29,6 +32,10 @@ export class DeviceCenterFormComponent implements OnInit {
   }
   saveCahnges() {
     this.onSaveChanges.emit(this.form.value);
+  }
+
+  onSelectedLocation(coordinates: coordinatesMap){
+    this.form.patchValue(coordinates);
   }
 
 }
