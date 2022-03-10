@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { deviceCenterCreationDTO } from '../deviceCenter.model';
+import { deviceCenterCreationDTO, deviceCenterDTO } from '../deviceCenter.model';
 
 @Component({
   selector: 'app-edit-device-center',
@@ -10,9 +10,11 @@ import { deviceCenterCreationDTO } from '../deviceCenter.model';
 export class EditDeviceCenterComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute) { }
-  model: deviceCenterCreationDTO = {
+  model: deviceCenterDTO = {
     name: 'i House',
-    address: 'Ramallah'
+    address: 'Ramallah',
+    latitude: 31.89201974116236 ,
+    longitude: 35.20319938659669
   }
 
   ngOnInit(): void {
