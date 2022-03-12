@@ -49,6 +49,7 @@ import { InputImgComponent } from './utilities/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
 import { DeviceCenterFormComponent } from './device-center/device-center-form/device-center-form.component';
 import { MapComponent } from './utilities/map/map.component';
+import { FormDeviceComponent } from './devices/form-device/form-device.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { MapComponent } from './utilities/map/map.component';
     InputImgComponent,
     InputMarkdownComponent,
     DeviceCenterFormComponent,
-    MapComponent
+    MapComponent,
+    FormDeviceComponent
   ],
   imports: [
     BrowserModule,

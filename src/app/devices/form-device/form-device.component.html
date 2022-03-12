@@ -1,0 +1,33 @@
+<form [formGroup]="form" (submit)="saveChanges()">
+    <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input formControlName="title" matInput />
+        <mat-error>The Title field is rquired</mat-error>
+    </mat-form-field>
+    <div class="checkbox-container">
+        <mat-checkbox formControlName="inMarket">In Market</mat-checkbox>
+    </div>
+    <mat-form-field appearance="outline">
+        <mat-label>Dealer</mat-label>
+        <input formControlName="dealer" matInput />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Release Date</mat-label>
+        <input formControlName="releaseDate" matInput [matDatepicker]="piker">
+        <mat-datepicker-toggle matSuffix [for]="piker"></mat-datepicker-toggle>
+        <mat-datepicker #piker></mat-datepicker>
+    </mat-form-field>
+
+    <h4>Select Poster Image</h4>
+    <app-input-img [urlCurrentImage]="model?.poster" (onImageSelected)="onImageSelected($event)"></app-input-img>
+    
+    <h4>Summary</h4>
+    <app-input-markdown [markdownContent]="model?.summary" (changeMarkdown)="changeMarkDown($event)">
+    </app-input-markdown>
+
+    <div>
+        <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
+        <a mat-stroked-button routerLink="/">Cancell</a>
+    </div>
+
+</form>

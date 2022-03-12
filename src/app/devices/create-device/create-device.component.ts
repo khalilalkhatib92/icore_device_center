@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { deviceCreationDTO } from '../devices.module';
 
 @Component({
   selector: 'app-create-device',
@@ -10,6 +11,9 @@ export class CreateDeviceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onSaveChanges(deviceCreationDTO: deviceCreationDTO){
+    console.log(deviceCreationDTO);
   }
 
 }
