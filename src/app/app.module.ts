@@ -50,6 +50,7 @@ import { InputMarkdownComponent } from './utilities/input-markdown/input-markdow
 import { DeviceCenterFormComponent } from './device-center/device-center-form/device-center-form.component';
 import { MapComponent } from './utilities/map/map.component';
 import { FormDeviceComponent } from './devices/form-device/form-device.component';
+import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { FormDeviceComponent } from './devices/form-device/form-device.component
     InputMarkdownComponent,
     DeviceCenterFormComponent,
     MapComponent,
-    FormDeviceComponent
+    FormDeviceComponent,
+    MultipleSelectorComponent
   ],
   imports: [
     BrowserModule,

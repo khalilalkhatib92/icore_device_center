@@ -25,6 +25,9 @@
     <app-input-markdown [markdownContent]="model?.summary" (changeMarkdown)="changeMarkDown($event)">
     </app-input-markdown>
 
+    <h4>Select Genres</h4>
+    <app-multiple-selector></app-multiple-selector>
+
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
         <a mat-stroked-button routerLink="/">Cancell</a>
