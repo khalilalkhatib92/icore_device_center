@@ -26,7 +26,10 @@
     </app-input-markdown>
 
     <h4>Select Genres</h4>
-    <app-multiple-selector></app-multiple-selector>
+    <app-multiple-selector [NonSelectedItem]="nonSelectedGenres" [SelectedItem]="selectedGenres"></app-multiple-selector>
+
+    <h4>Select Location / Where it's available:</h4>
+    <app-multiple-selector [NonSelectedItem]="nonSelectedDeviceCenter" [SelectedItem]="selectedDeviceCenter"></app-multiple-selector>
 
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>

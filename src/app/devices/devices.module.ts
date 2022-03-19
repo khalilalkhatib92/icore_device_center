@@ -5,6 +5,8 @@ export interface deviceCreationDTO{
     dealer: string;
     releaseDate: Date;
     poster:File;
+    genresIds: number[];
+    deviceCenterIds: number[];
 }
 
 export interface deviceDTO{
