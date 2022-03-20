@@ -31,6 +31,8 @@
     <h4>Select Location / Where it's available:</h4>
     <app-multiple-selector [NonSelectedItem]="nonSelectedDeviceCenter" [SelectedItem]="selectedDeviceCenter"></app-multiple-selector>
 
+    <h4> Select Dealers</h4>
+    <app-dealers-autocomplete></app-dealers-autocomplete>
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
         <a mat-stroked-button routerLink="/">Cancell</a>

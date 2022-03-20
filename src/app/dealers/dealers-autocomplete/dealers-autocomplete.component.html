@@ -1,0 +1,17 @@
+<form>
+    <mat-form-field>
+        <input type="text" placeholder="Select Dealers" 
+        [formControl]="control" 
+        [matAutocomplete]="auto"
+        matInput />
+    </mat-form-field>
+    <mat-autocomplete 
+    (optionSelected)="optionSelected($event)" #auto>
+        <mat-option *ngFor="let dealer of dealers" [value]="dealer">
+            <img [src]="dealer.picture"> {{dealer.name}}
+        </mat-option>
+    </mat-autocomplete>
+</form>
+<ul>
+    <li *ngFor="let dealer of selectedDealers">{{dealer.name}}</li>
+</ul>

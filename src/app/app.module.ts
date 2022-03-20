@@ -51,6 +51,7 @@ import { DeviceCenterFormComponent } from './device-center/device-center-form/de
 import { MapComponent } from './utilities/map/map.component';
 import { FormDeviceComponent } from './devices/form-device/form-device.component';
 import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
+import { DealersAutocompleteComponent } from './dealers/dealers-autocomplete/dealers-autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { MultipleSelectorComponent } from './utilities/multiple-selector/multipl
     DeviceCenterFormComponent,
     MapComponent,
     FormDeviceComponent,
-    MultipleSelectorComponent
+    MultipleSelectorComponent,
+    DealersAutocompleteComponent
   ],
   imports: [
     BrowserModule,
