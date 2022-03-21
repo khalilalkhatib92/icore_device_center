@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatAutocompleteModule, MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { MatTable } from '@angular/material/table';
 import { multipleSelectorModel } from 'src/app/utilities/multiple-selector/multipleSelectorModel.model';
 import { dealerCreationDTO } from '../dealers.module';
 
@@ -26,6 +28,10 @@ export class DealersAutocompleteComponent implements OnInit {
 
   originalDealers = this.dealers;
 
+  columnsToDisplay = ['picture', 'name', 'character', 'actions'];
+
+  @ViewChild(MatTable) table!: MatTable<any>;
+
   ngOnInit(): void {
     this.control.valueChanges.subscribe(value => {
       this.dealers = this.originalDealers;
@@ -37,6 +43,22 @@ export class DealersAutocompleteComponent implements OnInit {
     console.log(event.option.value);
     this.selectedDealers.push(event.option.value);
     this.control.patchValue('');
+    if(this.table !==undefined){
+      this.table.renderRows();
+    }
+  }
+
+  remove(dealer: any){
+    const index = this.selectedDealers.findIndex( (d: any) => d.name === dealer.name);
+    this.selectedDealers.splice(index, 1);
+    this.table.renderRows();
+    
+  }
+
+  dropped(event: CdkDragDrop<any[]>){
+    const prevoiusIndex = this.selectedDealers.findIndex((dealer: any) => dealer === event.item.data);
+    moveItemInArray(this.selectedDealers, prevoiusIndex, event.currentIndex);
+    this.table.renderRows();
   }
 
 }
