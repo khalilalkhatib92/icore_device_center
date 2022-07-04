@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -52,6 +53,7 @@ import { MapComponent } from './utilities/map/map.component';
 import { FormDeviceComponent } from './devices/form-device/form-device.component';
 import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
 import { DealersAutocompleteComponent } from './dealers/dealers-autocomplete/dealers-autocomplete.component';
+import { DisplayErrorsComponent } from './utilities/display-errors/display-errors.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +83,8 @@ import { DealersAutocompleteComponent } from './dealers/dealers-autocomplete/dea
     MapComponent,
     FormDeviceComponent,
     MultipleSelectorComponent,
-    DealersAutocompleteComponent
+    DealersAutocompleteComponent,
+    DisplayErrorsComponent
   ],
   imports: [
     BrowserModule,
@@ -91,6 +94,7 @@ import { DealersAutocompleteComponent } from './dealers/dealers-autocomplete/dea
     ReactiveFormsModule,
     FormsModule,
     LeafletModule,
+    HttpClientModule,
     MarkdownModule.forRoot()
     
   ],
